@@ -1,0 +1,59 @@
+{% extends 'Flights/base.html' %}
+{%block content%}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <h1>Welcome to  Flight Ticket Booking</h1>
+  <h2>Book your Ticket Now!</h2>
+  <br>
+  <br>
+  <div class="container">
+    <form action="" method ='POST'>
+      <label for="">Date of Travel:</label>
+      <input type="date" name="datef" value="">
+      <br>
+      <br>
+      <label for="">Time:</label>
+      <input type="time" name="timef" value="">
+      <br>
+      <br>
+      <label for='source' type="">Source</label>
+      <select name="source" id="source">
+        <option>NewYork</option>
+        <option>Paris</option>
+        <option>Washington</option>
+        <option>Dubai</option>
+      </select>
+      <br>
+      <br>
+      <label for='dest' type="">Destination</label>
+      <select name="source" id="source">
+        <option>NewYork</option>
+        <option>Paris</option>
+        <option>Washington</option>
+        <option>Dubai</option>
+      </select>
+      <br>
+      <br>
+      <label>Adults</label>
+      <select name='adults'>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+          </select>
+          <br>
+          <br>
+              <label>Children</label>
+        <select name='children'>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+          </select>
+      <br>
+      <br>
+      <input type="submit" name="" value="Search">
+    </form>
+  </div>
+{%endblock%}

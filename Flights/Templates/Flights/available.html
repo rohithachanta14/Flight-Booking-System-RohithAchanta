@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AvailableFlights</title>
+<link rel="stylesheet" href="{% static 'css/flight.css'%}">
+  </head>
+  <body>
+
+<table>
+  <tr>
+  <th>Airline</th>
+  <th>Date</th>
+  <th>Time</th>
+  <th>source</th>
+  <th>Destination</th>
+  <th>Available Seats</th>
+  <th>Booking</th>
+</tr>
+{%for items in flights_available %}
+<tr>
+  <td>{{items.airline}}</td>
+
+  <td>{{items.date}}</td>
+
+  <td class="required">{{items.time}}</td>
+
+  <td>{{items.src}}</td>
+
+  <td>{{items.dest}}</td>
+
+  <td>{{items.seatsavail}}</td>
+
+  <td><input type="submit" name="" value="Book"></td>
+</tr>
+    {%endfor%}
+</table>
+  </body>
+</html>
