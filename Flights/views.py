@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Availability,Airline
+from django.http import HttpResponse
 # Create your views here.
 def registerPage(request):
     form=CreateUserForm()
@@ -39,6 +40,18 @@ def about(request):
 
 def available(request):
     model=Availability
-    flights_available=Availability.objects.all()
+    if request.method=='POST':
+        datei=request.POST.get('datef')
+        timei=request.POST.get('timef')
+        srci=request.POST.get('source')
+        desti=request.POST.get('destination')
+        adc=request.POST.get('adults')
+        chc=request.POST.get('children')
+    if datei is not None and timei is not None and srci is not None and desti is not None:
+        flights_available=Availability.objects.filter(date=datei).filter(src=srci).filter(dest=desti)
+
+
     context={'flights_available':flights_available,}
     return render(request,'available.html',context)
+def admina(request):
+    return redirect('admina')

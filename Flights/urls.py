@@ -12,6 +12,5 @@ path('signin/',views.loginPage,name='loginPage'),
 path('logout/',views.logOutUser,name='logout'),
 path('home/',views.home,name='home'),
 path('available/',views.available,name='available'),
-
-
+path('admin/',views.admina,name='admina'),
 ]

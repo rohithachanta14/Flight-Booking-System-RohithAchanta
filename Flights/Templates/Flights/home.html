@@ -7,8 +7,9 @@
   <h2>Book your Ticket Now!</h2>
   <br>
   <br>
-  <div class="container">
-    <form action="" method ='POST'>
+  <div class="container" style='margin-left:20%'>
+    <form action="/available/" method ='POST'>
+      {%csrf_token%}
       <label for="">Date of Travel:</label>
       <input type="date" name="datef" value="">
       <br>
@@ -27,7 +28,7 @@
       <br>
       <br>
       <label for='dest' type="">Destination</label>
-      <select name="source" id="source">
+      <select name="destination" id="destination">
         <option>NewYork</option>
         <option>Paris</option>
         <option>Washington</option>
